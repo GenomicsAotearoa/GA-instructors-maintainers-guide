@@ -1,0 +1,9 @@
+---
+title: "Intro to bash scripting and HPC Workshop Setup instructions on REANNZ"
+format: html
+date-modified: last-modified
+---
+
+
+
+# WORK IN PROGRESS... 

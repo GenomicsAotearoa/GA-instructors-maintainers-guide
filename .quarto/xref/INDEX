@@ -1,0 +1,32 @@
+{
+  "index.qmd": {
+    "index.html": "6f7e40ac"
+  },
+  "mini-series-gene-ontology.qmd": {
+    "mini-series-gene-ontology.html": "a6467355"
+  },
+  "intro-hpc-setup.qmd": {
+    "intro-hpc-setup.html": "4cf772bb"
+  },
+  "workshop-general-timings.qmd": {
+    "workshop-general-timings.html": "f86b8ee5"
+  },
+  "r-workshop-specs.qmd": {
+    "r-workshop-specs.html": "b48e7c84"
+  },
+  "intro-hpc-workshop-setup.qmd": {
+    "intro-hpc-workshop-setup.html": "703823b3"
+  },
+  "workshop-general-timings-schedule.qmd": {
+    "workshop-general-timings-schedule.html": "301f0b43"
+  },
+  "r-based-workshop-specifications.qmd": {
+    "r-based-workshop-specifications.html": "e004c907"
+  },
+  "trainer-tips.qmd": {
+    "trainer-tips.html": "3d5742b5"
+  },
+  "test.qmd": {
+    "test.html": "6c128e72"
+  }
+}

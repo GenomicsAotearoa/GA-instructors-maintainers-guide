@@ -1,0 +1,321 @@
+---
+title: "Workshop General Timings Schedule"
+format: html
+date-modified: last-modified
+---
+
+```{=html}
+<style>
+.copy-table-btn {
+  display: inline-block;
+  margin: 0.4em 0 0.3em 0;
+  padding: 3px 10px;
+  font-size: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f6f6f6;
+  cursor: pointer;
+  color: #333;
+}
+.copy-table-btn:hover { background: #eaeaea; }
+.copy-table-btn.copied { background: #d6f5d6; border-color: #7cc47c; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("table").forEach(function (table) {
+    var btn = document.createElement("button");
+    btn.className = "copy-table-btn";
+    btn.type = "button";
+    btn.textContent = "Copy table";
+    table.parentNode.insertBefore(btn, table);
+
+    btn.addEventListener("click", function () {
+      var rows = table.querySelectorAll("tr");
+      var lines = [];
+      rows.forEach(function (row) {
+        var cells = row.querySelectorAll("th,td");
+        var vals = Array.from(cells).map(function (c) {
+          return c.textContent.trim();
+        });
+        lines.push(vals.join("\t"));
+      });
+      var tsv = lines.join("\n");
+
+      navigator.clipboard.writeText(tsv).then(function () {
+        btn.textContent = "Copied!";
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.textContent = "Copy table";
+          btn.classList.remove("copied");
+        }, 1500);
+      });
+    });
+  });
+});
+</script>
+```
+
+
+# **Work in progress....**
+
+## Introduction to R
+
+::: {.panel-tabset}
+
+### One day (10am–4pm)
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10–10:25 |
+| Environment log in | 10 mins | 10:25–10:35 |
+| Intro to R/Rstudio | 40 mins | 10:35–11:15 |
+| BREAK | 10 mins | 11:15–11:25 |
+| R basics | 1.5 hour | 11:25–12:30 |
+| LUNCH | 45 mins | 12:30–1:15 |
+| R basics | | 1:15–1:40 |
+| Intro to dataset | 5 mins | 1:40–1:45 |
+| R basics contd - factors and df | 1 hour | 1:45–2:45 |
+| BREAK | 10 mins | 2:45–2:55 |
+| Data viz w ggplot2 | 20 mins | 2:55–3:15 |
+| Conclusions/Getting help with R | ~30 mins | 3:15–END |
+| Producing Reports with knitr | | |
+
+### Two day (9:30am–12:30pm)
+
+**Day 1**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 9:30–9:55 |
+| Environment log in | 10 mins | 9:55–10:05 |
+| Intro to R/Rstudio | 30 mins | 10:05–10:35 |
+| BREAK | 10 mins | 10:35–10:45 |
+| R basics | 1.5 hrs | 10:45–11:40 |
+| BREAK | 10 mins | 11:40–11:50 |
+| R basics | ... | 11:50–12:25 |
+
+**Day 2**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Intro to dataset | 5 mins | 9:30–9:35 |
+| R basics contd - dataframes and manipulation | 1 hr | 9:35–10:35 |
+| BREAK | 10 mins | 10:35–10:45 |
+| Data viz w ggplot2 | 30 mins | 10:45–11:15 |
+| BREAK | 10 mins | 11:15–11:25 |
+| Conclusion: Getting help with R | 30 mins | 11:25–11:55 |
+
+:::
+
+## Visualisation with ggplot2
+
+Single-day workshop, 10am–4pm.
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10:00–10:25 am |
+| Environment log in | 10 mins | 10:25–10:35 am |
+| Visualisation with ggplot2 | 30 mins | 10:35–11:05 am |
+| BREAK | 10 mins | 11:05–11:15 am |
+| Exploratory analysis | 1 hour | 11:15–12:15 am |
+| LUNCH | 50 mins | 12:15–1:05 pm |
+| Exemplar vis | 40 mins | 1:05–1:45 pm |
+| Building better plots | 1.5 hour | 1:45–2:20 pm |
+| BREAK | 15 mins | 2:20–2:35 pm |
+| Building better plots | ... | 2:35–3:30 pm |
+| Close environment | | END OF DAY |
+
+## RNA-seq
+
+Two-day workshop.
+
+**Day 1**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 9–9:25 |
+| Environment log in | 10 mins | 9:25–9:35 |
+| Background | 10 mins | 9:35–9:45 |
+| Sequence quality | 55 mins | 9:45–10:10 |
+| BREAK | 10 mins | 10–10:10 |
+| Sequence quality | | 10:10–10:40 |
+| Quantifying gene expn | 1 hour | 10:40–11:10 |
+| BREAK | 10 mins | 11:10–11:20 |
+| Quantifying gene expn | | 11:20–11:50 |
+| Exploratory analysis | 1 hour | 11:50–12:20 |
+| BREAK | 10 mins | 12:20–12:30 |
+| Exploratory analysis | | 12:30–END |
+
+**Day 2**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Identify DE genes | | |
+| t-tests and Pvalues | 25 mins | 9–9:25 |
+| Identify DE w limma | 50 mins | 9:25–10:00 |
+| BREAK | 10 mins | 10–10:10 |
+| Identify DE w limma | | 10:10–10:25 |
+| Identify DE w DEseq2 | 30 mins | 10:25–10:55 |
+| BREAK | 15 mins | 10:55–11:10 |
+| Functional analysis | 50 mins | 11:10–12:00 |
+| OPTIONAL BREAK | 5–10 mins | |
+| General discussion | ~30 mins | 12:00–END |
+
+## Reproducibility with Git and Quarto
+
+Two-day workshop.
+
+**Day 1 – Git** (9:30am–2:30pm)
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 9:30–9:55 am |
+| Automated version control | 5 mins | 9:55–10:00 am |
+| Setting up Git | 10 mins | 10:00–10:10 am |
+| Create a repository | 10 mins | 10:10–10:20 am |
+| BREAK | 10 mins | 10:20–10:30 am |
+| Tracking, adding, committing, restoring changes | 50 mins | 10:30–11:20 am |
+| BREAK | 10 mins | 11:20–11:30 am |
+| Pushing local changes to github | 40 mins | 11:30–12:10 pm |
+| LUNCH | 50 mins | 12:10–1:00 pm |
+| Branches, pulling and merging | 40 mins | 1:00–1:40 pm |
+| Collaborating and organising your workflow | 20 mins | 1:40–2:00 pm |
+
+**Day 2 – Quarto** (9:30am–2:30pm)
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Introduction to Quarto | 10 mins | 9:30–9:40 am |
+| Getting started | 45 mins | 9:40–10:25 am |
+| BREAK | 10 mins | 10:25–10:35 am |
+| Code in qmd files | 45 mins | 10:35–11:20 am |
+| BREAK | 10 mins | 11:20–11:30 am |
+| Projects: books and websites | 30 mins | 11:30–12:00 pm |
+| LUNCH | 50 mins | 12:00–12:50 pm |
+| Building our own research portfolio | 50 mins | 12:50–1:40 pm |
+| Optional extra time | | 1:40–2:30 pm |
+
+## Introduction to Shell for Bioinformatics
+
+::: {.panel-tabset}
+
+### One day
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10:00–10:25 am |
+| Environment log in | 10 mins | 10:25–10:35 am |
+| Overview | 5 mins | 10:35–10:40 am |
+| First steps - say goodbye to mouse | 30 mins | 10:40–11:10 am |
+| BREAK | 10 mins | 11:10–11:20 am |
+| Navigating files and dirs | 40 mins | 11:20–12:00 |
+| Working with files and dirs | 55 mins | 12:00–12:20 |
+| LUNCH | 50 mins | 12:20–1:10 pm |
+| Working with files and dirs | ... | 1:10–1:45 |
+| Redirection | 50 mins | 1:45–2:20 pm |
+| BREAK | 10 mins | 2:20–2:30 pm |
+| Redirection | ... | 2:30–2:45 pm |
+| Writing with scripts and working with data | 45 mins | 2:45–3:30 pm |
+| Project organisation | ~5 mins | 3:30–3:35 pm |
+
+### Two day (9:30am–12:30pm)
+
+**Day 1**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 09:30–09:55 |
+| Environment log in | 10 mins | 09:55–10:05 |
+| Overview | 5 mins | 10:05–10:10 |
+| First steps - say goodbye to mouse | 30 mins | 10:10–10:40 |
+| BREAK | 10 mins | 10:40–10:50 |
+| Navigating files and dirs | 40 mins | 10:50–11:30 |
+| BREAK | 10 mins | 11:30–11:40 |
+| Working with files and dirs | 50 mins | 11:40–12:30 |
+
+**Day 2**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Working with files and dirs | 10 mins | 09:30–09:40 |
+| Redirection | 50 mins | 09:40–10:30 |
+| BREAK | 10 mins | 10:30–10:40 |
+| Writing with scripts and working with data | 45 mins | 10:40–11:25 |
+| Project organisation | 10 mins | 11:25–11:35 |
+
+:::
+
+## Introduction to Bash Scripting and HPC Scheduler
+
+Single-day workshop only, 10am–4pm.
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10:00–10:25 am |
+| Environment log in | 10 mins | 10:25–10:35 am |
+| Background | 5 mins | 10:35–10:40 |
+| Variant calling workflow | 1 hour | 10:40–11:10 |
+| BREAK | 10 mins | 11:10–11:20 |
+| Variant calling workflow | ... | 11:20–11:50 |
+| Automating a variant calling workflow | 30 mins | 11:50–12:20 |
+| LUNCH | 50 mins | 12:20–13:10 |
+| RNA-Seq Mapping and Count Data Workflow | 1.5 hour | 13:10–14:40 |
+| BREAK | 10 mins | 14:40–14:50 |
+| Introduction to HPC | 10 mins | 14:50–15:00 |
+| Working with job scheduler | 1 hour | 15:00–16:00 |
+
+## Intermediate R
+
+Two-day workshop only.
+
+**Day 1**
+
+| Episode | Instructor | Duration | Approx time |
+|---|---|---|---|
+| Welcome and opening | Chloe | 25 mins | 9–9:25 |
+| Environment log in | Matt | 10 mins | 9:25–9:35 |
+| Introduction to data | Chloe | 10 mins | 9:20–9:30 |
+| String manipulation | Chloe | 1 hour | 9:30–10:30 |
+| BREAK | | 15 mins | 10:30–10:45 |
+| Relational data | Murray | 40 mins | 10:45–11:25 |
+| Functions and conditional statements | | | |
+| part1 Anatomy of functions | Murray | 40 mins | 11:25–11:45 |
+| BREAK | | 15 mins | 11:45–12:00 |
+| Functions and conditional statements | | | |
+| part1 Anatomy of functions | Murray | ... | 12:00–12:20 |
+| part2 alpha diversity | Matt | 40 mins | 12:20–1pm |
+
+**Day 2**
+
+| Episode | Instructor | Duration | Approx time |
+|---|---|---|---|
+| part3 improve function design | | 30 mins | 9–9:30 |
+| Iterations | | | |
+| part1 for loops | | 50 mins | 9:30–10:40 |
+| BREAK | | 15 mins | 10:40–10:55 |
+| part2 Pairwise correlation | | 40 mins | 10:55–11:35 |
+| part3 rules to iterate by | | 20 mins | 11:35–11:55 |
+| BREAK | | 15 mins | 11:55–12:10 |
+| Data structures | | 40 mins | 12:10–12:50 |
+
+## Intermediate Shell
+
+::: {.callout-warning}
+Source spreadsheet flags this schedule as "needs updating — times are incorrect." Treat the approx times below as unreliable until revised.
+:::
+
+Single-day workshop, Day 1 only shown.
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10–10:25 |
+| Environment log in | 5 mins | 10:25–10:30 |
+| 1. Download and verify data | 10 mins | 10:30–10:40 |
+| 2. Streams, redirection, pipe | 35 mins | 10:35–11:10 |
+| BREAK | 10 mins | 11:10–11:20 |
+| 3. Inspecting + manipulating part1 | 1hr 10 | 11:20–12:30 |
+| LUNCH | 50 mins | 12:30–13:20 |
+| 4. Inspecting + manipulating part2 | 1 hour | 13:20–14:20 |
+| BREAK | 10 mins | 14:20–14:30 |
+| 4. Inspecting + manipulating part3 | 45 mins | 14:30–15:15 |
+| Puzzles | 45 mins | 15:15–16:00 |

@@ -1,0 +1,14 @@
+---
+title: ""
+format: html
+---
+
+
+
+![](images/GA-Logo-Bioinformatics-Training-black.png)
+
+\
+
+#### This guide is for instructors and maintainers of GA workshops
+
+\

@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "GA instructor and maintainer guide"
+  favicon: images/GA-image-black-favicon.png
+  navbar:
+    title: "GA instructor and maintainer guide"
+    left:
+      - href: workshop-general-timings-schedule.qmd
+        text: General Workshop Timings
+      - href: r-based-workshop-specifications.qmd
+        text: R-based Workshops
+      - href: intro-hpc-workshop-setup.qmd
+        text: Bash/HPC workshop setup on REANNZ
+      - href: trainer-tips.qmd
+        text: Trainer Tips
+
+format:
+  html:
+    theme:
+      light: default
+      dark: darkly
+    toc: true
+    link-external-newwindow: true
+
+filters:
+  - fontawesome

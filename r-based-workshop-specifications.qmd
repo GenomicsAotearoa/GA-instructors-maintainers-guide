@@ -1,0 +1,220 @@
+---
+title: "R-based Workshop Specifications"
+format: html
+date-modified: last-modified
+---
+
+
+This page outlines the software requirements and specifications for R-based workshops.
+
+
+## Fully R/RStudio based workshops:
+
+- [Introduction to R for Bioinformatics](https://github.com/GenomicsAotearoa/Introduction-to-R)  
+- [Intermediate R for Bioinformatics](https://github.com/GenomicsAotearoa/Intermediate-R)   
+- [Visualisation with ggplot2](https://github.com/GenomicsAotearoa/visualization_day)   
+
+**All packages needed across these workshops:**
+
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+install.packages("palmerpenguins")
+install.packages("viridis")
+install.packages("devtools")
+devtools::install_github("G-Thomson/Manu")
+install.packages("scales")
+install.packages("ggbeeswarm")
+install.packages("ggridges")
+install.packages("vegan")
+
+```
+
+**Load libraries:**
+
+```{r}
+#| eval: false
+
+library(tidyverse)
+library(palmerpenguins)
+library(viridis)
+library(devtools)
+library(Manu)
+library(scales)
+library(ggbeeswarm)
+library(ggridges)
+library(vegan)
+```
+
+
+
+## Individual workshop set-up 
+
+### Introduction to R
+
+GitHub {{< fa brands github >}}: [https://github.com/GenomicsAotearoa/Introduction-to-R](https://github.com/GenomicsAotearoa/Introduction-to-R)
+
+**General description:** This workshop uses primarily base R tools and default packages installed in RStudio. It uses one example dataset, which needs to be pre-loaded on the REANNZ training environment in `R4Genomics` dir, but there is also a [direct github link included in the material](https://genomicsaotearoa.github.io/Introduction-to-R/03-basics-dataframes-manipulation/#importing-tabular-data-into-r). Only one additional library is needed, which is `ggplot2.` 
+
+#### **Packages/libraries**
+
+```{r}
+#| eval: false
+
+install.packages("ggplot2")
+
+```
+
+
+```{r}
+#| eval: false
+
+library(ggplot2)
+```
+
+#### Dataset
+
+- The `combined_tidy_vcf.csv` is available on GitHub here: [https://github.com/GenomicsAotearoa/Introduction-to-R/blob/main/combined_tidy_vcf.csv](https://github.com/GenomicsAotearoa/Introduction-to-R/blob/main/combined_tidy_vcf.csv)
+
+Load in R: 
+
+```{r}
+#| eval: false
+
+variants <- read.csv("https://raw.githubusercontent.com/GenomicsAotearoa/Introduction-to-R/refs/heads/main/combined_tidy_vcf.csv")
+```
+
+\ 
+
+### Visualisation with ggplot2
+
+GitHub {{< fa brands github >}}: [https://github.com/GenomicsAotearoa/visualization_day](https://github.com/GenomicsAotearoa/visualization_day)
+
+**General description:** This workshop uses tidyverse tools and some extra packages for colours and geoms. It uses one example dataset, which is not pre-loaded on the REANNZ training environment and is supplied [in the material as a direct github link](https://genomicsaotearoa.github.io/visualization_day/viz_4_building_better.html#the-data). Many tidyverse tools are needed in this workshop (`ggplot2`, `dplyr`, `lubridate`, `forcats` etc) so we recommend installing all tidyverse. 
+
+
+#### **Packages/libraries**
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+install.packages("palmerpenguins")
+install.packages("viridis")
+install.packages("devtools")
+devtools::install_github("G-Thomson/Manu")
+install.packages("scales")
+install.packages("ggbeeswarm")
+install.packages("ggridges")
+```
+
+
+```{r}
+#| eval: false
+
+library(tidyverse)
+library(palmerpenguins)
+library(viridis)
+library(Manu)
+library(scales)
+library(ggbeeswarm)
+library(ggridges)
+library(glue)
+
+
+```
+
+
+#### Dataset
+
+- The `eDNA_group_counts.tsv` file is available on GitHub here: [https://github.com/GenomicsAotearoa/visualization_day/blob/main/data/eDNA_group_counts.csv](https://github.com/GenomicsAotearoa/visualization_day/blob/main/data/eDNA_group_counts.csv)
+
+Load in R: 
+
+```{r}
+#| eval: false
+top_group_counts <- read.delim("https://raw.githubusercontent.com/GenomicsAotearoa/visualization_day/refs/heads/main/data/eDNA_group_counts.tsv")
+```
+
+\
+
+
+### Intermediate R for bioinformatics
+
+GitHub {{< fa brands github >}}: [https://github.com/GenomicsAotearoa/Intermediate-R](https://github.com/GenomicsAotearoa/Intermediate-R)
+
+**General description:** This workshop uses multiple `tidyverse` tools and `vegan`, in addition to base R/default RStudio packages. It uses three example datasets, which are not pre-loaded on the REANNZ training environment and are supplied [in the material as direct github links](https://genomicsaotearoa.github.io/Intermediate-R/0.prep/). 
+
+#### **Packages/libraries**
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+install.packages("vegan")
+
+```
+
+
+```{r}
+#| eval: false
+
+library(tidyverse)
+library(vegan)
+```
+
+#### Dataset
+
+- The three datasets `asv_table.tsv`, `env_table.tsv`and `taxonomy.tsv` are available on GitHub here: [https://github.com/GenomicsAotearoa/Intermediate-R/tree/main/tables](https://github.com/GenomicsAotearoa/Intermediate-R/tree/main/tables)
+
+Load in R: 
+
+```{r}
+#| eval: false
+
+asv <- read.delim("https://raw.githubusercontent.com/GenomicsAotearoa/Intermediate-R/main/tables/asv_table.tsv")
+env <- read.delim("https://raw.githubusercontent.com/GenomicsAotearoa/Intermediate-R/main/tables/env_table.tsv")
+tax <- read.delim("https://raw.githubusercontent.com/GenomicsAotearoa/Intermediate-R/main/tables/taxonomy.tsv")
+```
+
+\ 
+
+# **WORK IN PROGRESS...**
+
+### Partially R/RStudio based workshops
+- [RNA-seq (yeast dataset)](https://github.com/GenomicsAotearoa/RNA-seq-data-analysis-workflow)
+- [RNA-seq (NZ dataset)](https://github.com/GenomicsAotearoa/RNA-seq-data-analysis-workflow-NZ)
+- [Reproducibility with Git and Quarto](https://github.com/GenomicsAotearoa/reproducibility_with_git_and_quarto)
+
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+install.packages("BiocManager")
+
+BiocManager::install("limma")
+BiocManager::install("edgeR")
+BiocManager::install("DESeq2")
+BiocManager::install("gplots")
+BiocManager::install("goseq")
+install.packages("ggiraph")
+install.packages("plotly")
+
+```
+
+```{r}
+#| eval: false
+
+library(tidyverse)
+library(limma)
+library(edgeR)
+library(DESeq2)
+library(ggiraph)
+library(plotly)
+library(gplots)
+library(goseq)
+
+```

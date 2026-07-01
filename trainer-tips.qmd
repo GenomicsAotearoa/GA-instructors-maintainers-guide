@@ -1,0 +1,15 @@
+---
+title: "Trainer Tips"
+format: html
+date-modified:  last-modified
+---
+
+Work in progress. Cover things such as:
+
+
+- ondemand - access the web shell node
+
+- nesi-get-pods
+
+- cp files to learner dirs
+

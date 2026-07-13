@@ -24,7 +24,7 @@ website:
 format:
   html:
     theme:
-      light: default
+      light: flatly
       dark: darkly
     toc: true
     link-external-newwindow: true

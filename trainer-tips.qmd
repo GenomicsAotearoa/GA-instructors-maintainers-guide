@@ -13,3 +13,7 @@ Work in progress. Cover things such as:
 
 - cp files to learner dirs
 
+
+Github:
+
+- Training workshps project

@@ -28,5 +28,8 @@
   },
   "test.qmd": {
     "test.html": "6c128e72"
+  },
+  "rnaseq-workshop-setup.qmd": {
+    "rnaseq-workshop-setup.html": "84082e21"
   }
 }

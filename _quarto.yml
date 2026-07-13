@@ -5,15 +5,19 @@ project:
 website:
   title: "GA instructor and maintainer guide"
   favicon: images/GA-image-black-favicon.png
-  navbar:
+  sidebar:
     title: "GA instructor and maintainer guide"
-    left:
+    contents:
+      - href: index.qmd
+        text: Home
       - href: workshop-general-timings-schedule.qmd
-        text: General Workshop Timings
+        text: General schedules for workshops
       - href: r-based-workshop-specifications.qmd
-        text: R-based Workshops
+        text: R-based workshops
+      - href: rnaseq-workshop-setup.qmd
+        text: RNA-seq workshop setup
       - href: intro-hpc-workshop-setup.qmd
-        text: Bash/HPC workshop setup on REANNZ
+        text: Bash/HPC workshop setup 
       - href: trainer-tips.qmd
         text: Trainer Tips
 

@@ -4,16 +4,81 @@ format: html
 date-modified:  last-modified
 ---
 
-Work in progress. Cover things such as:
+**Work in progress. **
 
 
-- ondemand - access the web shell node
+## Using the training environment
 
-- nesi-get-pods
+Most of our GA workshops (with the exception of [Intro to bash scripting /HPC job scheduler](https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler)) are run on a **Training environment (TE)**. These are unique Open OnDemand instances that REANNZ deploy prior to the workshop. Deployments pull from GitHub repos that REANNZ maintain separate to the workshop repos. The R/RStudio training environment is used for three workshops (Intro R, Intermediate R, Visualisation with ggplot2). The intro shell and intermediate shell workshops are separate deployments. TEs were first used around ??2024, so some of GA's workshop portfolio has never been run on a TE (all learners were added to the GA nesi02659 project instead prior to the workshop and the workshop is run on Mahuika).
 
-- cp files to learner dirs
+> Note 1: you don't (and can't!) type `module load` in TEs when using a terminal – modules are already loaded. 
+
+> Note 2: The launch time does not actually matter for apps in the TEs – the app will just keep running until the TE is destroyed.  
 
 
-Github:
+**Pros to the TE:**
+
+- Unique log ins – little admin needed from us before the workshop. IDs can be assigned to learners ad hoc. 
+- Software/packages are preinstalled. Learners do not need to install anything. 
+- Less time needed troubleshooting unique learner issues with logging in/software versions etc. and therefore more time is spent on learning the actual tools.  
+- Can monitor who has logged in and can copy/move files to learners if needed.  
+
+**Cons to the TE:** 
+
+- Must be maintained – any changes to the workshop material requiring new packages/software must be communicated back to REANNZ to update the TE. 
+- No HPC on the TE.  
+- Learners sometimes find it difficult understanding how to get started with R/shell outside of the TE (i.e., locally or on a HPC).  
+
+### Trainer vs training accounts 
+
+
+For each workshop we typically deploy **5 trainer** accounts and **30 training** accounts. 
+
+The paths for each account will typically look like:
+
+```bash
+/home/shared/trainer1
+```
+
+```bash
+/home/shared/training1
+```
+
+A few things to note about the accounts:
+
+- Trainer accounts can copy/move files to any training account. If `pwd` outputs something like: 
+
+    ```bash
+    pwd
+    ```
+
+    ```output
+    /home/shared/trainer1
+    ```
+
+    Then to copy a `file.txt` to a learner dir, type something like:
+
+    ```bash
+    cp file.txt /home/shared/training1
+    ```
+
+- Trainer accounts can access the Webnode Shell on the Cluster.
+
+    This is handy for checking which accounts are running.
+
+    1. From the dashboard, click on "Clusters" then "Webnode Shell Access (trainers only)".
+    2. Type "yes" if asked about adding the fingerprint to list of known hosts
+    3. Type `nesi-get-pods | grep 'train'` or `nesi-get-pods | grep 'training'` to see all trainer/training accounts running. 
+
+
+
+> Bonus! Always check the TE deployment is working before the workshop. On the rare occasion a deployment can be incomplete and some accounts do not spin up. Before the workshop, the coordinator (right now that is Chloe) should log in to a couple of accounts at random and check that the app will launch. Make sure to cancel and delete the session card to remove all traces of the session and log out again. 
+
+
+
+## Using Github
 
 - Training workshps project
+- issues
+- being aded to GA org. 
+- workshop repo topic labels

@@ -34,7 +34,27 @@
     "href": "trainer-tips.html",
     "title": "Trainer Tips",
     "section": "",
-    "text": "Work in progress. Cover things such as:\n\nondemand - access the web shell node\nnesi-get-pods\ncp files to learner dirs\n\nGithub:\n\nTraining workshps project",
+    "text": "Work in progress.",
+    "crumbs": [
+      "Trainer Tips"
+    ]
+  },
+  {
+    "objectID": "trainer-tips.html#using-the-training-environment",
+    "href": "trainer-tips.html#using-the-training-environment",
+    "title": "Trainer Tips",
+    "section": "Using the training environment",
+    "text": "Using the training environment\nMost of our GA workshops (with the exception of Intro to bash scripting /HPC job scheduler) are run on a Training environment (TE). These are unique Open OnDemand instances that REANNZ deploy prior to the workshop. Deployments pull from GitHub repos that REANNZ maintain separate to the workshop repos. The R/RStudio training environment is used for three workshops (Intro R, Intermediate R, Visualisation with ggplot2). The intro shell and intermediate shell workshops are separate deployments. TEs were first used around ??2024, so some of GA’s workshop portfolio has never been run on a TE (all learners were added to the GA nesi02659 project instead prior to the workshop and the workshop is run on Mahuika).\n\nNote 1: you don’t (and can’t!) type module load in TEs when using a terminal – modules are already loaded.\n\n\nNote 2: The launch time does not actually matter for apps in the TEs – the app will just keep running until the TE is destroyed.\n\nPros to the TE:\n\nUnique log ins – little admin needed from us before the workshop. IDs can be assigned to learners ad hoc.\nSoftware/packages are preinstalled. Learners do not need to install anything.\nLess time needed troubleshooting unique learner issues with logging in/software versions etc. and therefore more time is spent on learning the actual tools.\n\nCan monitor who has logged in and can copy/move files to learners if needed.\n\nCons to the TE:\n\nMust be maintained – any changes to the workshop material requiring new packages/software must be communicated back to REANNZ to update the TE.\nNo HPC on the TE.\n\nLearners sometimes find it difficult understanding how to get started with R/shell outside of the TE (i.e., locally or on a HPC).\n\n\nTrainer vs training accounts\nFor each workshop we typically deploy 5 trainer accounts and 30 training accounts.\nThe paths for each account will typically look like:\n/home/shared/trainer1\n/home/shared/training1\nA few things to note about the accounts:\n\nTrainer accounts can copy/move files to any training account. If pwd outputs something like:\npwd\n/home/shared/trainer1\nThen to copy a file.txt to a learner dir, type something like:\ncp file.txt /home/shared/training1\nTrainer accounts can access the Webnode Shell on the Cluster.\nThis is handy for checking which accounts are running.\n\nFrom the dashboard, click on “Clusters” then “Webnode Shell Access (trainers only)”.\nType “yes” if asked about adding the fingerprint to list of known hosts\nType nesi-get-pods | grep 'train' or nesi-get-pods | grep 'training' to see all trainer/training accounts running.\n\n\n\nBonus! Always check the TE deployment is working before the workshop. On the rare occasion a deployment can be incomplete and some accounts do not spin up. Before the workshop, the coordinator (right now that is Chloe) should log in to a couple of accounts at random and check that the app will launch. Make sure to cancel and delete the session card to remove all traces of the session and log out again.",
+    "crumbs": [
+      "Trainer Tips"
+    ]
+  },
+  {
+    "objectID": "trainer-tips.html#using-github",
+    "href": "trainer-tips.html#using-github",
+    "title": "Trainer Tips",
+    "section": "Using Github",
+    "text": "Using Github\n\nTraining workshps project\nissues\nbeing aded to GA org.\nworkshop repo topic labels",
     "crumbs": [
       "Trainer Tips"
     ]

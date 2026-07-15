@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -316,8 +351,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-the-training-environment" id="toc-using-the-training-environment" class="nav-link active" data-scroll-target="#using-the-training-environment">Using the training environment</a>
+  <ul class="collapse">
+  <li><a href="#trainer-vs-training-accounts" id="toc-trainer-vs-training-accounts" class="nav-link" data-scroll-target="#trainer-vs-training-accounts">Trainer vs training accounts</a></li>
+  </ul></li>
+  <li><a href="#using-github" id="toc-using-github" class="nav-link" data-scroll-target="#using-github">Using Github</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -337,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 1, 2026</p>
+      <p class="date-modified">July 15, 2026</p>
     </div>
   </div>
     
@@ -348,18 +393,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Work in progress. Cover things such as:</p>
+<p><strong>Work in progress. </strong></p>
+<section id="using-the-training-environment" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-training-environment">Using the training environment</h2>
+<p>Most of our GA workshops (with the exception of <a href="https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler">Intro to bash scripting /HPC job scheduler</a>) are run on a <strong>Training environment (TE)</strong>. These are unique Open OnDemand instances that REANNZ deploy prior to the workshop. Deployments pull from GitHub repos that REANNZ maintain separate to the workshop repos. The R/RStudio training environment is used for three workshops (Intro R, Intermediate R, Visualisation with ggplot2). The intro shell and intermediate shell workshops are separate deployments. TEs were first used around ??2024, so some of GA’s workshop portfolio has never been run on a TE (all learners were added to the GA nesi02659 project instead prior to the workshop and the workshop is run on Mahuika).</p>
+<blockquote class="blockquote">
+<p>Note 1: you don’t (and can’t!) type <code>module load</code> in TEs when using a terminal – modules are already loaded.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Note 2: The launch time does not actually matter for apps in the TEs – the app will just keep running until the TE is destroyed.</p>
+</blockquote>
+<p><strong>Pros to the TE:</strong></p>
 <ul>
-<li><p>ondemand - access the web shell node</p></li>
-<li><p>nesi-get-pods</p></li>
-<li><p>cp files to learner dirs</p></li>
+<li>Unique log ins – little admin needed from us before the workshop. IDs can be assigned to learners ad hoc.</li>
+<li>Software/packages are preinstalled. Learners do not need to install anything.</li>
+<li>Less time needed troubleshooting unique learner issues with logging in/software versions etc. and therefore more time is spent on learning the actual tools.<br>
+</li>
+<li>Can monitor who has logged in and can copy/move files to learners if needed.</li>
 </ul>
-<p>Github:</p>
+<p><strong>Cons to the TE:</strong></p>
+<ul>
+<li>Must be maintained – any changes to the workshop material requiring new packages/software must be communicated back to REANNZ to update the TE.</li>
+<li>No HPC on the TE.<br>
+</li>
+<li>Learners sometimes find it difficult understanding how to get started with R/shell outside of the TE (i.e., locally or on a HPC).</li>
+</ul>
+<section id="trainer-vs-training-accounts" class="level3">
+<h3 class="anchored" data-anchor-id="trainer-vs-training-accounts">Trainer vs training accounts</h3>
+<p>For each workshop we typically deploy <strong>5 trainer</strong> accounts and <strong>30 training</strong> accounts.</p>
+<p>The paths for each account will typically look like:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/shared/trainer1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/shared/training1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A few things to note about the accounts:</p>
+<ul>
+<li><p>Trainer accounts can copy/move files to any training account. If <code>pwd</code> outputs something like:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="output"><code>/home/shared/trainer1</code></pre>
+<p>Then to copy a <code>file.txt</code> to a learner dir, type something like:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> file.txt /home/shared/training1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Trainer accounts can access the Webnode Shell on the Cluster.</p>
+<p>This is handy for checking which accounts are running.</p>
+<ol type="1">
+<li>From the dashboard, click on “Clusters” then “Webnode Shell Access (trainers only)”.</li>
+<li>Type “yes” if asked about adding the fingerprint to list of known hosts</li>
+<li>Type <code>nesi-get-pods | grep 'train'</code> or <code>nesi-get-pods | grep 'training'</code> to see all trainer/training accounts running.</li>
+</ol></li>
+</ul>
+<blockquote class="blockquote">
+<p>Bonus! Always check the TE deployment is working before the workshop. On the rare occasion a deployment can be incomplete and some accounts do not spin up. Before the workshop, the coordinator (right now that is Chloe) should log in to a couple of accounts at random and check that the app will launch. Make sure to cancel and delete the session card to remove all traces of the session and log out again.</p>
+</blockquote>
+</section>
+</section>
+<section id="using-github" class="level2">
+<h2 class="anchored" data-anchor-id="using-github">Using Github</h2>
 <ul>
 <li>Training workshps project</li>
+<li>issues</li>
+<li>being aded to GA org.</li>
+<li>workshop repo topic labels</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

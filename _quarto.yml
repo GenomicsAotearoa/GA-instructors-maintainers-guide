@@ -5,6 +5,7 @@ project:
 website:
   title: "GA instructor and maintainer guide"
   favicon: images/GA-image-black-favicon.png
+  repo-url: https://github.com/GenomicsAotearoa/GA-instructors-maintainers-guide
   sidebar:
     title: "GA instructor and maintainer guide"
     contents:
@@ -22,6 +23,11 @@ website:
         text: Pangenomes workshop setup 
       - href: trainer-tips.qmd
         text: Trainer Tips
+
+    tools:
+        - icon: github
+          text: Github
+          href: https://github.com/GenomicsAotearoa/GA-instructors-maintainers-guide
 
 format:
   html:

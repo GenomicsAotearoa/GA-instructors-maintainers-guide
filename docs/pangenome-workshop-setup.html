@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Trainer Tips – GA instructor and maintainer guide</title>
+<title>Constructing Pangenome Graphs Workshop Setup instructions on REANNZ – GA instructor and maintainer guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,6 +80,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -282,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./trainer-tips.html">Trainer Tips</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pangenome-workshop-setup.html">Pangenomes workshop setup</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -342,13 +344,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pangenome-workshop-setup.html" class="sidebar-item-text sidebar-link">
+  <a href="./pangenome-workshop-setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Pangenomes workshop setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./trainer-tips.html" class="sidebar-item-text sidebar-link active">
+  <a href="./trainer-tips.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trainer Tips</span></a>
   </div>
 </li>
@@ -362,11 +364,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-the-training-environment" id="toc-using-the-training-environment" class="nav-link active" data-scroll-target="#using-the-training-environment">Using the training environment</a>
+  <li><a href="#dataset-setup" id="toc-dataset-setup" class="nav-link active" data-scroll-target="#dataset-setup">Dataset setup</a>
   <ul class="collapse">
-  <li><a href="#trainer-vs-training-accounts" id="toc-trainer-vs-training-accounts" class="nav-link" data-scroll-target="#trainer-vs-training-accounts">Trainer vs training accounts</a></li>
+  <li><a href="#instructions-to-setup-dataset-copies" id="toc-instructions-to-setup-dataset-copies" class="nav-link" data-scroll-target="#instructions-to-setup-dataset-copies">Instructions to setup dataset copies</a></li>
+  <li><a href="#backup-copy" id="toc-backup-copy" class="nav-link" data-scroll-target="#backup-copy">Backup copy</a></li>
   </ul></li>
-  <li><a href="#using-github" id="toc-using-github" class="nav-link" data-scroll-target="#using-github">Using Github</a></li>
   </ul>
 </nav>
     </div>
@@ -376,7 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Trainer Tips</h1>
+<h1 class="title">Constructing Pangenome Graphs Workshop Setup instructions on REANNZ</h1>
 </div>
 
 
@@ -399,67 +401,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>Work in progress. </strong></p>
-<section id="using-the-training-environment" class="level2">
-<h2 class="anchored" data-anchor-id="using-the-training-environment">Using the training environment</h2>
-<p>Most of our GA workshops (with the exception of <a href="https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler">Intro to bash scripting /HPC job scheduler</a> and some others) are run on a <strong>Training environment (TE)</strong>. These are unique Open OnDemand instances that REANNZ deploy prior to the workshop. Deployments pull from GitHub repos that REANNZ maintain separate to the workshop repos. The R/RStudio training environment is used for three workshops (Intro R, Intermediate R, Visualisation with ggplot2). The intro shell and intermediate shell workshops are separate deployments. TEs were first used around ??2024, so some of GA’s workshop portfolio has never been run on a TE (all learners were added to the GA nesi02659 project instead prior to the workshop and the workshop is run on Mahuika).</p>
-<blockquote class="blockquote">
-<p>Note 1: you don’t (and can’t!) type <code>module load</code> in TEs when using a terminal – modules are already loaded.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Note 2: The launch time does not actually matter for apps in the TEs – the app will just keep running until the TE is destroyed.</p>
-</blockquote>
-<p><strong>Pros to the TE:</strong></p>
+<p>GitHub <i class="fa-brands fa-github" aria-label="github"></i>: <a href="https://github.com/GenomicsAotearoa/Pangenome-Graphs-Workshop">https://github.com/GenomicsAotearoa/Pangenome-Graphs-Workshop</a></p>
+<p>This workshop needs to be run on the REANNZ HPC cluster.</p>
+<p>All learners and instructors will need to have an account on the REANNZ HPC cluster and will need to be added to the GA training project nesi02659 as team members before the workshop.</p>
+<section id="dataset-setup" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-setup">Dataset setup</h2>
+<p>Each user will get their own copy of the example dataset. These copies will be made in the nobackup dir, but the original dataset is stored in the project dir. The very first thing all learners and instructors will do in the workshop is create a symbolic link to their own copy of the dataset in their home directory. The benefit of this that:</p>
 <ul>
-<li>Unique log ins – little admin needed from us before the workshop. IDs can be assigned to learners ad hoc.</li>
-<li>Software/packages are preinstalled. Learners do not need to install anything.</li>
-<li>Less time needed troubleshooting unique learner issues with logging in/software versions etc. and therefore more time is spent on learning the actual tools.<br>
+<li>Everyone can work on their own copy of the dataset without interfering with each other.<br>
 </li>
-<li>Can monitor who has logged in and can copy/move files to learners if needed.</li>
+<li>Everyone’s path to the dataset will be the same (<code>~/pg_workshop</code>), so all workshop instructions will work for everyone.</li>
 </ul>
-<p><strong>Cons to the TE:</strong></p>
-<ul>
-<li>Must be maintained – any changes to the workshop material requiring new packages/software must be communicated back to REANNZ to update the TE.</li>
-<li>No HPC on the TE.<br>
-</li>
-<li>Learners sometimes find it difficult understanding how to get started with R/shell outside of the TE (i.e., locally or on a HPC).</li>
-</ul>
-<section id="trainer-vs-training-accounts" class="level3">
-<h3 class="anchored" data-anchor-id="trainer-vs-training-accounts">Trainer vs training accounts</h3>
-<p>For each workshop we typically deploy <strong>5 trainer</strong> accounts and <strong>30 training</strong> accounts.</p>
-<p>The paths for each account will typically look like:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/shared/trainer1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/shared/training1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A few things to note about the accounts:</p>
-<ul>
-<li><p>Trainer accounts can copy/move files to any training account. If <code>pwd</code> outputs something like:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre class="output"><code>/home/shared/trainer1</code></pre>
-<p>Then to copy a <code>file.txt</code> to a learner dir, type something like:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> file.txt /home/shared/training1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Trainer accounts can access the Webnode Shell on the Cluster.</p>
-<p>This is handy for checking which accounts are running.</p>
+<p>The original dataset is stored at:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/nesi/project/nesi02659/pg_workshop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>which contains:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-F</span> pg_workshop/</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">5NM.fa</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="instructions-to-setup-dataset-copies" class="level3">
+<h3 class="anchored" data-anchor-id="instructions-to-setup-dataset-copies">Instructions to setup dataset copies</h3>
+<p>There are instructions on setting up copies of the dataset in the project at:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/nesi/project/nesi02659/INSTRUCTOR_INSTRUCTIONS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These instructions below are the same as the instructions in the readme in the pangenome workshop instructions dir. This should be completed once by the lead training coordinator (right now that is Chloe) or a REANNZ staff member may assist and complete this. It is best to wait until you have all nesi user names from all participants (learners and instructors/helpers):</p>
+<p><strong>Steps:</strong></p>
 <ol type="1">
-<li>From the dashboard, click on “Clusters” then “Webnode Shell Access (trainers only)”.</li>
-<li>Type “yes” if asked about adding the fingerprint to list of known hosts</li>
-<li>Type <code>nesi-get-pods | grep 'train'</code> or <code>nesi-get-pods | grep 'training'</code> to see all trainer/training accounts running.</li>
-</ol></li>
-</ul>
-<blockquote class="blockquote">
-<p>Bonus! Always check the TE deployment is working before the workshop. On the rare occasion a deployment can be incomplete and some accounts do not spin up. Before the workshop, the coordinator (right now that is Chloe) should log in to a couple of accounts at random and check that the app will launch. Make sure to cancel and delete the session card to remove all traces of the session and log out again.</p>
-</blockquote>
+<li>Change dir to nobackup and make a new pangenome workshop dir</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /nesi/nobackup/nesi02659/</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> pg_workshop </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> pg_workshop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Create a text file called <code>.new</code> and copy each user account IDs for each learner on a new line. Include all instructors and helpers too!</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> .new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Copy the contents of the dataset to a hidden template folder</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /nesi/project/nesi02659/pg_workshop /nesi/nobackup/nesi02659/pg_workshop/.template</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-F</span> /nesi/nobackup/nesi02659/pg_workshop/.template</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>5NM.fa</code></pre>
+<ol start="4" type="1">
+<li>Copy the script <code>copy.sh</code> to /nesi/nobackup/nesi02659/pg_workshop/</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /nesi/project/nesi02659/INSTRUCTOR_INSTRUCTIONS/pangenome-graphs_WORKSHOP-INSTRUCTIONS/copy.sh .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Run the copy.sh script. The output should make a new dir named for each user, and within each user dir all the pg_workshop template files should be contained.</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> copy.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Expected output after successful copy.sh run:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-F</span> /nesi/nobackup/nesi02659/pg_workshop/users/<span class="pp">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>/nesi/nobackup/nesi02659/pg_workshop/users/username1:
+5NM.fa
+
+/nesi/nobackup/nesi02659/pg_workshop/users/username2:
+5NM.fa
+
+/nesi/nobackup/nesi02659/pg_workshop/users/username3:
+5NM.fa</code></pre>
+<ol start="6" type="1">
+<li>Get each learner and instructor to create a symlink to their own dir above by running:</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> /nesi/nobackup/nesi02659/pg_workshop/users/<span class="va">${USER}</span> pg_workshop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="7" type="1">
+<li>Good to go!</li>
+<li>At the end of workshop, run <code>rm -rf /nesi/nobackup/nesi02659/pg_workshop</code> to remove all copies of the datasets.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Copy.sh
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> copy.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>#!/bin/bash -e
+MAIN_DIR="/nesi/nobackup/nesi02659/pg_workshop"
+mkdir -p ${MAIN_DIR}/users
+for ACCOUNT in $(cat ${MAIN_DIR}/.new)
+do
+    echo "setting up ${ACCOUNT} ..."
+    cp -r ${MAIN_DIR}/.template ${MAIN_DIR}/users/${ACCOUNT}
+    chmod -R 777 ${MAIN_DIR}/users/${ACCOUNT}
+done
+</code></pre>
+</div>
+</div>
 </section>
-</section>
-<section id="using-github" class="level2">
-<h2 class="anchored" data-anchor-id="using-github">Using Github</h2>
-<ul>
-<li>Training workshps project</li>
-<li>issues</li>
-<li>being aded to GA org.</li>
-<li>workshop repo topic labels</li>
-</ul>
+<section id="backup-copy" class="level3">
+<h3 class="anchored" data-anchor-id="backup-copy">Backup copy</h3>
+<p>There is a back up of the dataset on GitHub:</p>
+<p><a href="https://github.com/ZoeYang2020/dataset_for_pg_workshop">https://github.com/ZoeYang2020/dataset_for_pg_workshop</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

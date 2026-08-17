@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -45,6 +80,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-ccd81253fefb92e9cd3f9eb5b5d87b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -307,6 +344,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./pangenome-workshop-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pangenomes workshop setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./trainer-tips.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Trainer Tips</span></a>
   </div>
@@ -321,7 +364,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link active" data-scroll-target="#work-in-progress">WORK IN PROGRESS…</a></li>
+  <li><a href="#dataset-setup" id="toc-dataset-setup" class="nav-link active" data-scroll-target="#dataset-setup">Dataset setup</a>
+  <ul class="collapse">
+  <li><a href="#instructions-to-setup-dataset-copies" id="toc-instructions-to-setup-dataset-copies" class="nav-link" data-scroll-target="#instructions-to-setup-dataset-copies">Instructions to setup dataset copies</a></li>
+  <li><a href="#backup-copy" id="toc-backup-copy" class="nav-link" data-scroll-target="#backup-copy">Backup copy</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -343,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 1, 2026</p>
+      <p class="date-modified">August 17, 2026</p>
     </div>
   </div>
     
@@ -354,10 +401,102 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="work-in-progress" class="level1">
-<h1>WORK IN PROGRESS…</h1>
+<p>GitHub <i class="fa-brands fa-github" aria-label="github"></i>: <a href="https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler">https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler</a></p>
+<p>This workshop needs to be run on the REANNZ HPC cluster.</p>
+<p>All learners and instructors will need to have an account on the REANNZ HPC cluster and will need to be added to the GA training project nesi02659 as team members before the workshop.</p>
+<section id="dataset-setup" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-setup">Dataset setup</h2>
+<p>Each user will get their own copy of the example dataset. These copies will be made in the nobackup dir, but the original dataset is stored in the project dir. The very first thing all learners and instructors will do in the workshop is create a symbolic link to their own copy of the dataset in their home directory. The benefit of this that:</p>
+<ul>
+<li>Everyone can work on their own copy of the dataset without interfering with each other.<br>
+</li>
+<li>Everyone’s path to the dataset will be the same (<code>~/scripting_workshop</code>), so all workshop instructions will work for everyone.</li>
+</ul>
+<p>The original dataset is stored at:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/nesi/project/nesi02659/scripting_workshop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>which contains:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-F</span> scripting_workshop/</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">modload.sh*</span>  rna_seq/  scheduler/   variant_calling/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="instructions-to-setup-dataset-copies" class="level3">
+<h3 class="anchored" data-anchor-id="instructions-to-setup-dataset-copies">Instructions to setup dataset copies</h3>
+<p>There are instructions on setting up copies of the dataset in the project at:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/nesi/project/nesi02659/INSTRUCTOR_INSTRUCTIONS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These instructions below are the same as the instructions in the readme in the HPC/bash workshop instructions dir. This should be completed once by the lead training coordinator (right now that is Chloe) or a REANNZ staff member may assist and complete this. It is best to wait until you have all nesi user names from all participants (learners and instructors/helpers):</p>
+<p><strong>Steps:</strong></p>
+<ol type="1">
+<li>Change dir to nobackup and make a new scripting workshop dir</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /nesi/nobackup/nesi02659/</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> scripting_workshop </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> scripting_workshop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Create a text file called <code>.new</code> and copy each user account IDs for each learner on a new line. Include all instructors and helpers too!</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> .new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Copy the contents of the dataset to a hidden template folder</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /nesi/project/nesi02659/scripting_workshop /nesi/nobackup/nesi02659/scripting_workshop/.template</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-F</span> /nesi/nobackup/nesi02659/scripting_workshop/.template</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>rnaseq/ scheduler/ variant_calling/ modload.sh</code></pre>
+<ol start="4" type="1">
+<li>Copy the script <code>copy.sh</code> to /nesi/nobackup/nesi02659/scripting_workshop/</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /nesi/project/nesi02659/INSTRUCTOR_INSTRUCTIONS/intro-hpc-bash-script_WORKSHOP-INSTRUCTIONS/copy.sh .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Run the copy.sh script. The output should make a new dir named for each user, and within each user dir all the scripting_workshop template files should be contained.</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> copy.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Expected output after successful copy.sh run:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-F</span> /nesi/nobackup/nesi02659/scripting_workshop/users/<span class="pp">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>/nesi/nobackup/nesi02659/scripting_workshop/users/username1:
+modload.sh*  rna_seq/  scheduler/  variant_calling/
+
+/nesi/nobackup/nesi02659/scripting_workshop/users/username2:
+modload.sh*  rna_seq/  scheduler/  variant_calling/
+
+/nesi/nobackup/nesi02659/scripting_workshop/users/username3:
+modload.sh*  rna_seq/  scheduler/     variant_calling/</code></pre>
+<ol start="6" type="1">
+<li>Get each learner and instructor to create a symlink to their own dir above by running:</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> /nesi/nobackup/nesi02659/scripting_workshop/users/<span class="va">${USER}</span> scripting_workshop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="7" type="1">
+<li>Good to go!</li>
+<li>At the end of workshop, run <code>rm -rf /nesi/nobackup/nesi02659/scripting_workshop</code> to remove all copies of the datasets.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Copy.sh
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> copy.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>#!/bin/bash -e
+MAIN_DIR="/nesi/nobackup/nesi02659/scripting_workshop"
+mkdir -p ${MAIN_DIR}/users
+for ACCOUNT in $(cat ${MAIN_DIR}/.new)
+do
+    echo "setting up ${ACCOUNT} ..."
+    cp -r ${MAIN_DIR}/.template ${MAIN_DIR}/users/${ACCOUNT}
+    chmod -R 777 ${MAIN_DIR}/users/${ACCOUNT}
+done
+</code></pre>
+</div>
+</div>
+</section>
+<section id="backup-copy" class="level3">
+<h3 class="anchored" data-anchor-id="backup-copy">Backup copy</h3>
+<p>There is a back up of the dataset on GitHub:</p>
+<p><a href="https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler/releases/download/2026-April/scripting_workshop.zip">https://github.com/GenomicsAotearoa/Workshop-Bash_Scripting_And_HPC_Job_Scheduler/releases/download/2026-April/scripting_workshop.zip</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

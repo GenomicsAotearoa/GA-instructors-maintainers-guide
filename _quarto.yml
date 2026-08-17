@@ -18,6 +18,8 @@ website:
         text: RNA-seq workshop setup
       - href: intro-hpc-workshop-setup.qmd
         text: Bash/HPC workshop setup 
+      - href: pangenome-workshop-setup.qmd
+        text: Pangenomes workshop setup 
       - href: trainer-tips.qmd
         text: Trainer Tips
 

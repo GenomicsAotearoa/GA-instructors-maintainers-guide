@@ -1,0 +1,128 @@
+---
+title: "Constructing Pangenome Graphs Workshop Setup instructions on REANNZ"
+format: html
+date-modified: last-modified
+---
+
+GitHub {{< fa brands github >}}: [https://github.com/GenomicsAotearoa/Pangenome-Graphs-Workshop](https://github.com/GenomicsAotearoa/Pangenome-Graphs-Workshop)
+
+This workshop needs to be run on the REANNZ HPC cluster.
+
+All learners and instructors will need to have an account on the REANNZ HPC cluster and will need to be added to the GA training project nesi02659 as team members before the workshop.
+
+## Dataset setup
+
+Each user will get their own copy of the example dataset. These copies will be made in the nobackup dir, but the original dataset is stored in the project dir. The very first thing all learners and instructors will do in the workshop is create a symbolic link to their own copy of the dataset in their home directory. The benefit of this that:
+
+- Everyone can work on their own copy of the dataset without interfering with each other.  
+- Everyone's path to the dataset will be the same (`~/pg_workshop`), so all workshop instructions will work for everyone.
+
+
+The original dataset is stored at:
+
+```bash
+/nesi/project/nesi02659/pg_workshop
+```
+
+which contains:
+```bash
+ls -F pg_workshop/
+5NM.fa
+```
+
+
+### Instructions to setup dataset copies
+
+There are instructions on setting up copies of the dataset in the project at:
+
+```bash
+/nesi/project/nesi02659/INSTRUCTOR_INSTRUCTIONS
+```
+
+These instructions below are the same as the instructions in the readme in the pangenome workshop instructions dir. This should be completed once by the lead training coordinator (right now that is Chloe) or a REANNZ staff member may assist and complete this. It is best to wait until you have all nesi user names from all participants (learners and instructors/helpers):
+
+**Steps:**  
+
+1. Change dir to nobackup and make a new pangenome workshop dir
+```bash
+cd /nesi/nobackup/nesi02659/
+mkdir pg_workshop 
+cd pg_workshop
+```
+2. Create a text file called `.new` and copy each user account IDs for each learner on a new line. Include all instructors and helpers too!
+```bash
+nano .new
+```
+
+3. Copy the contents of the dataset to a hidden template folder
+```bash
+cp -r /nesi/project/nesi02659/pg_workshop /nesi/nobackup/nesi02659/pg_workshop/.template
+```
+```bash
+ls -F /nesi/nobackup/nesi02659/pg_workshop/.template
+``` 
+```
+5NM.fa
+```
+4. Copy the script `copy.sh` to /nesi/nobackup/nesi02659/pg_workshop/
+```bash
+cp /nesi/project/nesi02659/INSTRUCTOR_INSTRUCTIONS/pangenome-graphs_WORKSHOP-INSTRUCTIONS/copy.sh .
+``` 
+5. Run the copy.sh script. The output should make a new dir named for each user, and within each user dir all the pg_workshop template files should be contained.
+
+```bash
+bash copy.sh
+```
+
+Expected output after successful copy.sh run: 
+```bash
+ls -F /nesi/nobackup/nesi02659/pg_workshop/users/*
+```
+```
+/nesi/nobackup/nesi02659/pg_workshop/users/username1:
+5NM.fa
+
+/nesi/nobackup/nesi02659/pg_workshop/users/username2:
+5NM.fa
+
+/nesi/nobackup/nesi02659/pg_workshop/users/username3:
+5NM.fa
+```
+6. Get each learner and instructor to create a symlink to their own dir above by running:
+
+```bash 
+cd ~
+ln -s /nesi/nobackup/nesi02659/pg_workshop/users/${USER} pg_workshop
+```
+7. Good to go!
+8. At the end of workshop,  run `rm -rf /nesi/nobackup/nesi02659/pg_workshop` to remove all copies of the datasets. 
+
+
+::: {.callout-note}
+# Copy.sh
+
+```bash
+cat copy.sh
+```
+
+```
+#!/bin/bash -e
+MAIN_DIR="/nesi/nobackup/nesi02659/pg_workshop"
+mkdir -p ${MAIN_DIR}/users
+for ACCOUNT in $(cat ${MAIN_DIR}/.new)
+do
+    echo "setting up ${ACCOUNT} ..."
+    cp -r ${MAIN_DIR}/.template ${MAIN_DIR}/users/${ACCOUNT}
+    chmod -R 777 ${MAIN_DIR}/users/${ACCOUNT}
+done
+
+```
+
+:::
+
+
+### Backup copy
+
+There is a back up of the dataset on GitHub:
+
+[https://github.com/ZoeYang2020/dataset_for_pg_workshop](https://github.com/ZoeYang2020/dataset_for_pg_workshop)

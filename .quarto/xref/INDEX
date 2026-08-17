@@ -31,5 +31,8 @@
   },
   "rnaseq-workshop-setup.qmd": {
     "rnaseq-workshop-setup.html": "84082e21"
+  },
+  "pangenome-workshop-setup.qmd": {
+    "pangenome-workshop-setup.html": "fa337241"
   }
 }

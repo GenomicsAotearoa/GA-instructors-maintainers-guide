@@ -53,6 +53,15 @@ cd scripting_workshop
 ```bash
 nano .new
 ```
+Once you've entered the usernames and saved the .new file, it should look like:
+```bash
+cat .new
+```
+```
+username1
+username2
+username3
+```
 
 3. Copy the contents of the dataset to a hidden template folder
 ```bash

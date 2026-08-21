@@ -252,18 +252,19 @@ Single-day workshop only, 10am–4pm.
 
 | Episode | Duration | Approx time |
 |---|---|---|
-| Welcome and opening | 25 mins | 10:00–10:25 am |
-| Environment log in | 10 mins | 10:25–10:35 am |
+| Welcome and opening | 25 mins | 10:00–10:25  |
+| Environment log in | 10 mins | 10:25–10:35  |
 | Background | 5 mins | 10:35–10:40 |
-| Variant calling workflow | 1 hour | 10:40–11:10 |
+| Variant calling workflow | 50 mins | 10:40–11:10 |
 | BREAK | 10 mins | 11:10–11:20 |
-| Variant calling workflow | ... | 11:20–11:50 |
-| Automating a variant calling workflow | 30 mins | 11:50–12:20 |
+| Variant calling workflow | ... | 11:20–11:40 |
+| Automating a variant calling workflow | 40 mins | 11:40–12:20 |
 | LUNCH | 50 mins | 12:20–13:10 |
-| RNA-Seq Mapping and Count Data Workflow | 1.5 hour | 13:10–14:40 |
-| BREAK | 10 mins | 14:40–14:50 |
-| Introduction to HPC | 10 mins | 14:50–15:00 |
-| Working with job scheduler | 1 hour | 15:00–16:00 |
+| RNA-Seq Mapping and Count Data Workflow | 1 hour | 13:10–14:10 |
+| BREAK | 10 mins | 14:10–14:20 |
+| Introduction to HPC | 10 mins | 14:20–14:30 |
+| Working with job scheduler | 1 hour | 14:30–15:30 |
+| Buffer time | 30 mins | 15:30 - 16:00 |
 
 ## Intermediate R
 

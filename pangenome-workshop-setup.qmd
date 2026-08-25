@@ -27,7 +27,7 @@ The original dataset is stored at:
 which contains:
 ```bash
 ls -F pg_workshop/
-5NM.fa
+5NM.fa* Short_Read_Mapping/
 ```
 
 
@@ -80,13 +80,13 @@ ls -F /nesi/nobackup/nesi02659/pg_workshop/users/*
 ```
 ```
 /nesi/nobackup/nesi02659/pg_workshop/users/username1:
-5NM.fa
+5NM.fa* Short_Read_Mapping/
 
 /nesi/nobackup/nesi02659/pg_workshop/users/username2:
-5NM.fa
+5NM.fa* Short_Read_Mapping/
 
 /nesi/nobackup/nesi02659/pg_workshop/users/username3:
-5NM.fa
+5NM.fa* Short_Read_Mapping/
 ```
 6. Get each learner and instructor to create a symlink to their own dir above by running:
 
@@ -99,7 +99,7 @@ ln -s /nesi/nobackup/nesi02659/pg_workshop/users/${USER} pg_workshop
 
 
 ::: {.callout-note}
-# Copy.sh
+# Copy.sh - back up if the original is lost
 
 ```bash
 cat copy.sh
@@ -125,4 +125,6 @@ done
 
 There is a back up of the dataset on GitHub:
 
-[https://github.com/ZoeYang2020/dataset_for_pg_workshop](https://github.com/ZoeYang2020/dataset_for_pg_workshop)
+Go to: [https://github.com/GenomicsAotearoa/Pangenome-Graphs-Workshop/releases/download/2026-August/5NM.fa](https://github.com/GenomicsAotearoa/Pangenome-Graphs-Workshop/releases/download/2026-August/5NM.fa) for the latest dataset release.
+
+Originally sourced from: [https://github.com/ZoeYang2020/dataset_for_pg_workshop](https://github.com/ZoeYang2020/dataset_for_pg_workshop)

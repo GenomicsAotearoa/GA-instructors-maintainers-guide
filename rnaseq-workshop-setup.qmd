@@ -80,8 +80,18 @@ library(goseq)
 
 #### Datasets
 
-- The files needed are in a directory in GitHub here: To be added... []()
+- The files needed are in a directory in GitHub here:  [September 2026 release](https://github.com/GenomicsAotearoa/RNA-seq-data-analysis-workflow-NZ/releases/tag/2026-September)
 
+ - There is also an extra copy in `/nesi/project/nesi02659/Chloe_files_2026/RNAseq-nz`  
 
+Contains: 
+
+```
+├── RNAseq/
+        ├──backup-files/
+        ├──DataFiles/
+        ├──Genome/
+        ├──RawReads/
+```
 
 \ 

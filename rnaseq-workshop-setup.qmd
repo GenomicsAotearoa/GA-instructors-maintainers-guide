@@ -6,7 +6,7 @@ date-modified: last-modified
 
 
 
-### RNA-seq workshop (NZ dataset)
+### RNA-seq workshop (NZ wrasse dataset)
 
 GitHub {{< fa brands github >}}: [https://github.com/GenomicsAotearoa/RNA-seq-data-analysis-workflow-NZ](https://github.com/GenomicsAotearoa/RNA-seq-data-analysis-workflow-NZ)
 

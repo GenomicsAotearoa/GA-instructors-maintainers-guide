@@ -328,9 +328,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#work-in-progress." id="toc-work-in-progress." class="nav-link active" data-scroll-target="#work-in-progress."><strong>Work in progress….</strong></a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-r" id="toc-introduction-to-r" class="nav-link" data-scroll-target="#introduction-to-r">Introduction to R</a></li>
+  <li><a href="#introduction-to-r" id="toc-introduction-to-r" class="nav-link active" data-scroll-target="#introduction-to-r">Introduction to R</a></li>
   <li><a href="#visualisation-with-ggplot2" id="toc-visualisation-with-ggplot2" class="nav-link" data-scroll-target="#visualisation-with-ggplot2">Visualisation with ggplot2</a></li>
   <li><a href="#rna-seq" id="toc-rna-seq" class="nav-link" data-scroll-target="#rna-seq">RNA-seq</a></li>
   <li><a href="#reproducibility-with-git-and-quarto" id="toc-reproducibility-with-git-and-quarto" class="nav-link" data-scroll-target="#reproducibility-with-git-and-quarto">Reproducibility with Git and Quarto</a></li>
@@ -338,7 +336,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction-to-bash-scripting-and-hpc-scheduler" id="toc-introduction-to-bash-scripting-and-hpc-scheduler" class="nav-link" data-scroll-target="#introduction-to-bash-scripting-and-hpc-scheduler">Introduction to Bash Scripting and HPC Scheduler</a></li>
   <li><a href="#intermediate-r" id="toc-intermediate-r" class="nav-link" data-scroll-target="#intermediate-r">Intermediate R</a></li>
   <li><a href="#intermediate-shell" id="toc-intermediate-shell" class="nav-link" data-scroll-target="#intermediate-shell">Intermediate Shell</a></li>
-  </ul></li>
+  <li><a href="#constructing-pangenome-graphs" id="toc-constructing-pangenome-graphs" class="nav-link" data-scroll-target="#constructing-pangenome-graphs">Constructing Pangenome Graphs</a></li>
   </ul>
 </nav>
     </div>
@@ -360,7 +358,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 21, 2026</p>
+      <p class="date-modified">September 24, 2026</p>
     </div>
   </div>
     
@@ -419,8 +417,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-<section id="work-in-progress." class="level1">
-<h1><strong>Work in progress….</strong></h1>
 <section id="introduction-to-r" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-r">Introduction to R</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -457,49 +453,49 @@ document.addEventListener("DOMContentLoaded", function () {
 <td>11:15–11:25</td>
 </tr>
 <tr class="odd">
-<td>R basics</td>
-<td>1.5 hour</td>
-<td>11:25–12:30</td>
+<td>R basics (objects)</td>
+<td>30 mins</td>
+<td>11:25–11:55</td>
 </tr>
 <tr class="even">
+<td>R basics (vectors)</td>
+<td>50 mins</td>
+<td>11:55–12:15</td>
+</tr>
+<tr class="odd">
 <td>LUNCH</td>
 <td>45 mins</td>
-<td>12:30–1:15</td>
-</tr>
-<tr class="odd">
-<td>R basics</td>
-<td></td>
-<td>1:15–1:40</td>
+<td>12:15–1:00</td>
 </tr>
 <tr class="even">
+<td>R basics (vectors) cont’d</td>
+<td>…</td>
+<td>1:00–1:30</td>
+</tr>
+<tr class="odd">
 <td>Intro to dataset</td>
 <td>5 mins</td>
-<td>1:40–1:45</td>
-</tr>
-<tr class="odd">
-<td>R basics contd - factors and df</td>
-<td>1 hour</td>
-<td>1:45–2:45</td>
+<td>1:30–1:35</td>
 </tr>
 <tr class="even">
+<td>R basics contd - df and manipulation</td>
+<td>1 hour</td>
+<td>1:35–2:35</td>
+</tr>
+<tr class="odd">
 <td>BREAK</td>
 <td>10 mins</td>
-<td>2:45–2:55</td>
-</tr>
-<tr class="odd">
-<td>Data viz w ggplot2</td>
-<td>20 mins</td>
-<td>2:55–3:15</td>
+<td>2:35–2:45</td>
 </tr>
 <tr class="even">
-<td>Conclusions/Getting help with R</td>
-<td>~30 mins</td>
-<td>3:15–END</td>
+<td>Data viz w ggplot2</td>
+<td>40 mins</td>
+<td>2:45–3:25</td>
 </tr>
 <tr class="odd">
-<td>Producing Reports with knitr</td>
-<td></td>
-<td></td>
+<td>Getting help with R</td>
+<td>20 mins</td>
+<td>3:25–END</td>
 </tr>
 </tbody>
 </table>
@@ -568,34 +564,39 @@ document.addEventListener("DOMContentLoaded", function () {
 </thead>
 <tbody>
 <tr class="odd">
+<td>Welcome and housekeeping</td>
+<td>10 mins</td>
+<td>9:30–9:40</td>
+</tr>
+<tr class="even">
 <td>Intro to dataset</td>
 <td>5 mins</td>
-<td>9:30–9:35</td>
+<td>9:40–9:45</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>R basics contd - dataframes and manipulation</td>
 <td>1 hr</td>
-<td>9:35–10:35</td>
-</tr>
-<tr class="odd">
-<td>BREAK</td>
-<td>10 mins</td>
-<td>10:35–10:45</td>
+<td>9:45–10:45</td>
 </tr>
 <tr class="even">
+<td>BREAK</td>
+<td>10 mins</td>
+<td>10:45–10:55</td>
+</tr>
+<tr class="odd">
 <td>Data viz w ggplot2</td>
 <td>45 mins</td>
-<td>10:45–11:30</td>
-</tr>
-<tr class="odd">
-<td>BREAK</td>
-<td>10 mins</td>
-<td>11:30–11:40</td>
+<td>10:55–11:40</td>
 </tr>
 <tr class="even">
+<td>BREAK</td>
+<td>10 mins</td>
+<td>11:40–11:50</td>
+</tr>
+<tr class="odd">
 <td>Conclusion: Getting help with R</td>
-<td>30 mins</td>
-<td>11:40–12:10</td>
+<td>20 mins</td>
+<td>11:50–12:10</td>
 </tr>
 </tbody>
 </table>
@@ -675,7 +676,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 <section id="rna-seq" class="level2">
 <h2 class="anchored" data-anchor-id="rna-seq">RNA-seq</h2>
-<p>Two-day workshop.</p>
+<p>Two-day workshop (9am - 1 pm)</p>
 <p><strong>Day 1</strong></p>
 <table class="caption-top table">
 <thead>
@@ -813,8 +814,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 <section id="reproducibility-with-git-and-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="reproducibility-with-git-and-quarto">Reproducibility with Git and Quarto</h2>
-<p>Two-day workshop.</p>
-<p><strong>Day 1 – Git</strong> (9:30am–2:30pm)</p>
+<p>Two-day workshop (9:30am–2:30pm)</p>
+<p><strong>Day 1 – Git</strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -886,7 +887,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </tr>
 </tbody>
 </table>
-<p><strong>Day 2 – Quarto</strong> (9:30am–2:30pm)</p>
+<p><strong>Day 2 – Quarto</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -947,7 +948,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <section id="introduction-to-shell-for-bioinformatics" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-shell-for-bioinformatics">Introduction to Shell for Bioinformatics</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">One day</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Two day (9:30am–12:30pm)</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">One day (10 am - 4 pm)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Two day (9:30am–12:30pm)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <table class="caption-top table">
@@ -1002,7 +1003,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <tr class="odd">
 <td>Working with files and dirs</td>
 <td>…</td>
-<td>1:10–1:45</td>
+<td>1:10–1:45 pm</td>
 </tr>
 <tr class="even">
 <td>Redirection</td>
@@ -1208,13 +1209,17 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 <section id="intermediate-r" class="level2">
 <h2 class="anchored" data-anchor-id="intermediate-r">Intermediate R</h2>
-<p>Two-day workshop only.</p>
+<p>Two-day workshop, 9 am - 1 pm</p>
 <p><strong>Day 1</strong></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Episode</th>
-<th>Instructor</th>
 <th>Duration</th>
 <th>Approx time</th>
 </tr>
@@ -1222,73 +1227,51 @@ document.addEventListener("DOMContentLoaded", function () {
 <tbody>
 <tr class="odd">
 <td>Welcome and opening</td>
-<td>Chloe</td>
 <td>25 mins</td>
 <td>9–9:25</td>
 </tr>
 <tr class="even">
 <td>Environment log in</td>
-<td>Matt</td>
 <td>10 mins</td>
 <td>9:25–9:35</td>
 </tr>
 <tr class="odd">
 <td>Introduction to data</td>
-<td>Chloe</td>
 <td>10 mins</td>
 <td>9:20–9:30</td>
 </tr>
 <tr class="even">
 <td>String manipulation</td>
-<td>Chloe</td>
 <td>1 hour</td>
 <td>9:30–10:30</td>
 </tr>
 <tr class="odd">
 <td>BREAK</td>
-<td></td>
 <td>15 mins</td>
 <td>10:30–10:45</td>
 </tr>
 <tr class="even">
 <td>Relational data</td>
-<td>Murray</td>
 <td>40 mins</td>
 <td>10:45–11:25</td>
 </tr>
 <tr class="odd">
-<td>Functions and conditional statements</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>part1 Anatomy of functions</td>
-<td>Murray</td>
+<td>Functions and conditional statements part1 Anatomy of functions</td>
 <td>40 mins</td>
 <td>11:25–11:45</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>BREAK</td>
-<td></td>
 <td>15 mins</td>
 <td>11:45–12:00</td>
 </tr>
-<tr class="even">
-<td>Functions and conditional statements</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr class="odd">
-<td>part1 Anatomy of functions</td>
-<td>Murray</td>
+<td>Functions and conditional statements part1 Anatomy of functions</td>
 <td>…</td>
 <td>12:00–12:20</td>
 </tr>
 <tr class="even">
-<td>part2 alpha diversity</td>
-<td>Matt</td>
+<td>Functions and conditional statements part2 alpha diversity</td>
 <td>40 mins</td>
 <td>12:20–1pm</td>
 </tr>
@@ -1296,82 +1279,60 @@ document.addEventListener("DOMContentLoaded", function () {
 </table>
 <p><strong>Day 2</strong></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Episode</th>
-<th>Instructor</th>
 <th>Duration</th>
 <th>Approx time</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>part3 improve function design</td>
-<td></td>
+<td>Functions and conditional statements part3 improve function design</td>
 <td>30 mins</td>
 <td>9–9:30</td>
 </tr>
 <tr class="even">
-<td>Iterations</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>part1 for loops</td>
+<td>Iterations part1 for loops</td>
 <td></td>
 <td>50 mins</td>
-<td>9:30–10:40</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>BREAK</td>
-<td></td>
 <td>15 mins</td>
 <td>10:40–10:55</td>
 </tr>
-<tr class="odd">
-<td>part2 Pairwise correlation</td>
+<tr class="even">
+<td>Iterations part2 Pairwise correlation</td>
 <td></td>
 <td>40 mins</td>
-<td>10:55–11:35</td>
-</tr>
-<tr class="even">
-<td>part3 rules to iterate by</td>
-<td></td>
-<td>20 mins</td>
-<td>11:35–11:55</td>
 </tr>
 <tr class="odd">
-<td>BREAK</td>
+<td>Iterations part3 rules to iterate by</td>
 <td></td>
+<td>20 mins</td>
+</tr>
+<tr class="even">
+<td>BREAK</td>
 <td>15 mins</td>
 <td>11:55–12:10</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Data structures</td>
 <td></td>
 <td>40 mins</td>
-<td>12:10–12:50</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="intermediate-shell" class="level2">
 <h2 class="anchored" data-anchor-id="intermediate-shell">Intermediate Shell</h2>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Source spreadsheet flags this schedule as “needs updating — times are incorrect.” Treat the approx times below as unreliable until revised.</p>
-</div>
-</div>
-<p>Single-day workshop, Day 1 only shown.</p>
+<p>Single-day workshop, 10 am - 4 pm</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1438,9 +1399,91 @@ Warning
 </tr>
 </tbody>
 </table>
-
-
 </section>
+<section id="constructing-pangenome-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="constructing-pangenome-graphs">Constructing Pangenome Graphs</h2>
+<p>One day workshop, 09:30 - 14:30</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Episode</th>
+<th>Duration</th>
+<th>Approx time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Welcome and opening</td>
+<td>25 mins</td>
+<td>10–10:25</td>
+</tr>
+<tr class="even">
+<td>Environment log in</td>
+<td>5 mins</td>
+<td>10:25–10:30</td>
+</tr>
+<tr class="odd">
+<td>Introduction to pangenome graphs</td>
+<td>10 mins</td>
+<td>10:30–10:40</td>
+</tr>
+<tr class="even">
+<td>Tools &amp; setup</td>
+<td>10 mins</td>
+<td>10:40–10:50</td>
+</tr>
+<tr class="odd">
+<td>Introduction to PGGB</td>
+<td>15 mins</td>
+<td>10:50–11:05</td>
+</tr>
+<tr class="even">
+<td>BREAK</td>
+<td>5 mins</td>
+<td>11:05–11:10</td>
+</tr>
+<tr class="odd">
+<td>Running PGGB</td>
+<td>40 mins</td>
+<td>11:10–11:50</td>
+</tr>
+<tr class="even">
+<td>BREAK</td>
+<td>10 mins</td>
+<td>11:50–12:00</td>
+</tr>
+<tr class="odd">
+<td>Evaluating output</td>
+<td>35 mins</td>
+<td>12:00–12:35</td>
+</tr>
+<tr class="even">
+<td>LUNCH</td>
+<td>45 mins</td>
+<td>12:35–13:20</td>
+</tr>
+<tr class="odd">
+<td>Variant calling I</td>
+<td>30 mins</td>
+<td>13:20–13:50</td>
+</tr>
+<tr class="even">
+<td>Variant calling II</td>
+<td>20 mins</td>
+<td>13:50–14:10</td>
+</tr>
+<tr class="odd">
+<td>Buffer time</td>
+<td>20 mins</td>
+<td>14:10–14:30</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>Note: Last step in ‘Running PGGB’ takes 15 mins to run. Go to break once run starts.</p>
+</blockquote>
+
+
 </section>
 
 </main> <!-- /main -->

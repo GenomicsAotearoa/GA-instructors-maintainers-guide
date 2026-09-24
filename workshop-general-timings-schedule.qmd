@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 ```
 
 
-# **Work in progress....**
-
 ## Introduction to R
 
 ::: {.panel-tabset}
@@ -70,15 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
 | Environment log in | 10 mins | 10:25–10:35 |
 | Intro to R/Rstudio | 40 mins | 10:35–11:15 |
 | BREAK | 10 mins | 11:15–11:25 |
-| R basics | 1.5 hour | 11:25–12:30 |
-| LUNCH | 45 mins | 12:30–1:15 |
-| R basics | | 1:15–1:40 |
-| Intro to dataset | 5 mins | 1:40–1:45 |
-| R basics contd - factors and df | 1 hour | 1:45–2:45 |
-| BREAK | 10 mins | 2:45–2:55 |
-| Data viz w ggplot2 | 20 mins | 2:55–3:15 |
-| Conclusions/Getting help with R | ~30 mins | 3:15–END |
-| Producing Reports with knitr | | |
+| R basics (objects) | 30 mins | 11:25–11:55 |
+| R basics (vectors) | 50 mins | 11:55–12:15 |
+| LUNCH | 45 mins | 12:15–1:00 |
+| R basics (vectors) cont'd | ...| 1:00–1:30 |
+| Intro to dataset | 5 mins | 1:30–1:35 |
+| R basics contd - df and manipulation| 1 hour | 1:35–2:35 |
+| BREAK | 10 mins | 2:35–2:45 |
+| Data viz w ggplot2 | 40 mins | 2:45–3:25 |
+| Getting help with R | 20 mins | 3:25–END |
 
 ### Two day (9:30am–12:30pm)
 
@@ -99,12 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 | Episode | Duration | Approx time |
 |---|---|---|
-| Intro to dataset | 5 mins | 9:30–9:35 |
-| R basics contd - dataframes and manipulation | 1 hr | 9:35–10:35 |
-| BREAK | 10 mins | 10:35–10:45 |
-| Data viz w ggplot2 | 45 mins | 10:45–11:30 |
-| BREAK | 10 mins | 11:30–11:40 |
-| Conclusion: Getting help with R | 30 mins | 11:40–12:10 |
+| Welcome and housekeeping | 10 mins | 9:30–9:40 |
+| Intro to dataset | 5 mins | 9:40–9:45 |
+| R basics contd - dataframes and manipulation | 1 hr | 9:45–10:45 |
+| BREAK | 10 mins | 10:45–10:55 |
+| Data viz w ggplot2 | 45 mins | 10:55–11:40 |
+| BREAK | 10 mins | 11:40–11:50 |
+| Conclusion: Getting help with R | 20 mins | 11:50–12:10 |
 
 :::
 
@@ -128,7 +127,7 @@ Single-day workshop, 10am–4pm.
 
 ## RNA-seq
 
-Two-day workshop.
+Two-day workshop (9am - 1 pm)
 
 **Day 1**
 
@@ -164,9 +163,9 @@ Two-day workshop.
 
 ## Reproducibility with Git and Quarto
 
-Two-day workshop.
+Two-day workshop (9:30am–2:30pm)
 
-**Day 1 – Git** (9:30am–2:30pm)
+**Day 1 – Git** 
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -182,7 +181,7 @@ Two-day workshop.
 | Branches, pulling and merging | 40 mins | 1:00–1:40 pm |
 | Collaborating and organising your workflow | 20 mins | 1:40–2:00 pm |
 
-**Day 2 – Quarto** (9:30am–2:30pm)
+**Day 2 – Quarto** 
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -200,7 +199,7 @@ Two-day workshop.
 
 ::: {.panel-tabset}
 
-### One day
+### One day (10 am - 4 pm)
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -212,7 +211,7 @@ Two-day workshop.
 | Navigating files and dirs | 40 mins | 11:20–12:00 |
 | Working with files and dirs | 55 mins | 12:00–12:20 |
 | LUNCH | 50 mins | 12:20–1:10 pm |
-| Working with files and dirs | ... | 1:10–1:45 |
+| Working with files and dirs | ... | 1:10–1:45 pm |
 | Redirection | 50 mins | 1:45–2:20 pm |
 | BREAK | 10 mins | 2:20–2:30 pm |
 | Redirection | ... | 2:30–2:45 pm |
@@ -268,45 +267,39 @@ Single-day workshop only, 10am–4pm.
 
 ## Intermediate R
 
-Two-day workshop only.
+Two-day workshop, 9 am - 1 pm 
 
 **Day 1**
 
-| Episode | Instructor | Duration | Approx time |
-|---|---|---|---|
-| Welcome and opening | Chloe | 25 mins | 9–9:25 |
-| Environment log in | Matt | 10 mins | 9:25–9:35 |
-| Introduction to data | Chloe | 10 mins | 9:20–9:30 |
-| String manipulation | Chloe | 1 hour | 9:30–10:30 |
-| BREAK | | 15 mins | 10:30–10:45 |
-| Relational data | Murray | 40 mins | 10:45–11:25 |
-| Functions and conditional statements | | | |
-| part1 Anatomy of functions | Murray | 40 mins | 11:25–11:45 |
-| BREAK | | 15 mins | 11:45–12:00 |
-| Functions and conditional statements | | | |
-| part1 Anatomy of functions | Murray | ... | 12:00–12:20 |
-| part2 alpha diversity | Matt | 40 mins | 12:20–1pm |
+| Episode  | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 9–9:25 |
+| Environment log in | 10 mins | 9:25–9:35 |
+| Introduction to data | 10 mins | 9:20–9:30 |
+| String manipulation | 1 hour | 9:30–10:30 |
+| BREAK | 15 mins | 10:30–10:45 |
+| Relational data | 40 mins | 10:45–11:25 |
+| Functions and conditional statements part1 Anatomy of functions  | 40 mins | 11:25–11:45 |
+| BREAK | 15 mins | 11:45–12:00 |
+| Functions and conditional statements part1 Anatomy of functions  | ... | 12:00–12:20 |
+| Functions and conditional statements part2 alpha diversity | 40 mins | 12:20–1pm |
 
 **Day 2**
 
-| Episode | Instructor | Duration | Approx time |
-|---|---|---|---|
-| part3 improve function design | | 30 mins | 9–9:30 |
-| Iterations | | | |
-| part1 for loops | | 50 mins | 9:30–10:40 |
-| BREAK | | 15 mins | 10:40–10:55 |
-| part2 Pairwise correlation | | 40 mins | 10:55–11:35 |
-| part3 rules to iterate by | | 20 mins | 11:35–11:55 |
-| BREAK | | 15 mins | 11:55–12:10 |
+| Episode | Duration | Approx time |
+|---|---|---|
+| Functions and conditional statements part3 improve function design | 30 mins | 9–9:30 |
+| Iterations part1 for loops | | 50 mins | 9:30–10:40 |
+| BREAK | 15 mins | 10:40–10:55 |
+| Iterations part2 Pairwise correlation | | 40 mins | 10:55–11:35 |
+| Iterations part3 rules to iterate by | | 20 mins | 11:35–11:55 |
+| BREAK |  15 mins | 11:55–12:10 |
 | Data structures | | 40 mins | 12:10–12:50 |
 
 ## Intermediate Shell
 
-::: {.callout-warning}
-Source spreadsheet flags this schedule as "needs updating — times are incorrect." Treat the approx times below as unreliable until revised.
-:::
 
-Single-day workshop, Day 1 only shown.
+Single-day workshop, 10 am - 4 pm
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -321,3 +314,26 @@ Single-day workshop, Day 1 only shown.
 | BREAK | 10 mins | 14:20–14:30 |
 | 4. Inspecting + manipulating part3 | 45 mins | 14:30–15:15 |
 | Puzzles | 45 mins | 15:15–16:00 |
+
+
+## Constructing Pangenome Graphs
+
+One day workshop, 09:30 - 14:30
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10–10:25 |
+| Environment log in | 5 mins | 10:25–10:30 |
+| Introduction to pangenome graphs | 10 mins | 10:30–10:40 |
+| Tools & setup | 10 mins | 10:40–10:50 |
+| Introduction to PGGB | 15 mins | 10:50–11:05 |
+| BREAK | 5 mins | 11:05–11:10 |
+| Running PGGB | 40 mins | 11:10–11:50 |
+| BREAK | 10 mins | 11:50–12:00 |
+| Evaluating output | 35 mins | 12:00–12:35 |
+| LUNCH | 45 mins | 12:35–13:20 |
+| Variant calling I | 30 mins | 13:20–13:50 |
+| Variant calling II | 20 mins | 13:50–14:10 |
+| Buffer time | 20 mins | 14:10–14:30 |
+
+> Note: Last step in 'Running PGGB' takes 15 mins to run. Go to break once run starts.  

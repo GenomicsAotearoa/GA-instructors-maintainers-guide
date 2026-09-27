@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ```
 
 
-## Introduction to R
+## Introduction to R 
 
 ::: {.panel-tabset}
 
@@ -107,9 +107,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 :::
 
+## Introduction to Shell  
+
+::: {.panel-tabset}
+
+### One day (10 am - 4 pm)
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 10:00–10:25 am |
+| Environment log in | 10 mins | 10:25–10:35 am |
+| Overview | 5 mins | 10:35–10:40 am |
+| First steps - say goodbye to mouse | 30 mins | 10:40–11:10 am |
+| BREAK | 10 mins | 11:10–11:20 am |
+| Navigating files and dirs | 40 mins | 11:20–12:00 pm |
+| Working with files and dirs | 60 mins | 12:00–12:20 pm |
+| LUNCH | 50 mins | 12:20–1:10 pm |
+| Working with files and dirs cont'd | ... | 1:10–1:50 pm |
+| Redirection | 60 mins | 1:50–2:20 pm |
+| BREAK | 10 mins | 2:20–2:30 pm |
+| Redirection cont'd | ... | 2:30–3:00 pm |
+| Writing with scripts and working with data | 40 mins | 3:00 –3:40 pm |
+| Project organisation | 5 mins | 3:40–3:45 pm |
+| Buffer time | 15 mins | 3:45–4:00 pm |
+
+
+### Two day (9:30am–12:30pm)
+
+**Day 1**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 09:30–09:55 |
+| Environment log in | 10 mins | 09:55–10:05 |
+| Overview | 5 mins | 10:05–10:10 |
+| First steps - say goodbye to mouse | 30 mins | 10:10–10:40 |
+| BREAK | 10 mins | 10:40–10:50 |
+| Navigating files and dirs | 40 mins | 10:50–11:30 |
+| BREAK | 10 mins | 11:30–11:40 |
+| Working with files and dirs | 50 mins | 11:40–12:30 |
+
+**Day 2**
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Working with files and dirs | 10 mins | 09:30–09:40 |
+| Redirection | 50 mins | 09:40–10:30 |
+| BREAK | 10 mins | 10:30–10:40 |
+| Writing with scripts and working with data | 45 mins | 10:40–11:25 |
+| Project organisation | 10 mins | 11:25–11:35 |
+
+:::
+
+
 ## Visualisation with ggplot2
 
-Single-day workshop, 10am–4pm.
+::: {.panel-tabset}
+
+### One day (10am–4pm)
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -123,11 +178,15 @@ Single-day workshop, 10am–4pm.
 | Building better plots | 1.5 hour | 1:45–2:20 pm |
 | BREAK | 15 mins | 2:20–2:35 pm |
 | Building better plots | ... | 2:35–3:30 pm |
-| Close environment | | END OF DAY |
+| Buffer time| 30 mins | 3:30-4:00 pm |
+
+:::
 
 ## RNA-seq
 
-Two-day workshop (9am - 1 pm)
+::: {.panel-tabset}
+
+### Two-day workshop (9am - 1 pm)
 
 **Day 1**
 
@@ -161,9 +220,13 @@ Two-day workshop (9am - 1 pm)
 | OPTIONAL BREAK | 5–10 mins | |
 | General discussion | ~30 mins | 12:00–END |
 
+:::
+
 ## Reproducibility with Git and Quarto
 
-Two-day workshop (9:30am–2:30pm)
+::: {.panel-tabset}
+
+### Two-day workshop (9:30am–2:30pm)
 
 **Day 1 – Git** 
 
@@ -176,78 +239,35 @@ Two-day workshop (9:30am–2:30pm)
 | BREAK | 10 mins | 10:20–10:30 am |
 | Tracking, adding, committing, restoring changes | 50 mins | 10:30–11:20 am |
 | BREAK | 10 mins | 11:20–11:30 am |
-| Pushing local changes to github | 40 mins | 11:30–12:10 pm |
-| LUNCH | 50 mins | 12:10–1:00 pm |
-| Branches, pulling and merging | 40 mins | 1:00–1:40 pm |
-| Collaborating and organising your workflow | 20 mins | 1:40–2:00 pm |
+| Pushing local changes to github | 45 mins | 11:30–12:15 pm |
+| LUNCH | 50 mins | 12:15–1:05 pm |
+| Branches, pulling and merging | 45 mins | 1:05–1:50 pm |
+| Collaborating and organising your workflow | 30 mins | 1:50–2:20 pm |
+| Buffer time | 10 mins | 2:20-2:30 pm |
+
 
 **Day 2 – Quarto** 
 
 | Episode | Duration | Approx time |
 |---|---|---|
-| Introduction to Quarto | 10 mins | 9:30–9:40 am |
-| Getting started | 45 mins | 9:40–10:25 am |
+| Welcome and housekeeping | 5 mins | 9:30–9:35 am |
+| Introduction to Quarto | 10 mins | 9:35–9:45 am |
+| Getting started | 40 mins | 9:45–10:25 am |
 | BREAK | 10 mins | 10:25–10:35 am |
-| Code in qmd files | 45 mins | 10:35–11:20 am |
-| BREAK | 10 mins | 11:20–11:30 am |
-| Projects: books and websites | 30 mins | 11:30–12:00 pm |
-| LUNCH | 50 mins | 12:00–12:50 pm |
-| Building our own research portfolio | 40 mins | 12:50–1:30 pm |
-| Optional extra time | | 1:30–2:30 pm |
-
-## Introduction to Shell for Bioinformatics
-
-::: {.panel-tabset}
-
-### One day (10 am - 4 pm)
-
-| Episode | Duration | Approx time |
-|---|---|---|
-| Welcome and opening | 25 mins | 10:00–10:25 am |
-| Environment log in | 10 mins | 10:25–10:35 am |
-| Overview | 5 mins | 10:35–10:40 am |
-| First steps - say goodbye to mouse | 30 mins | 10:40–11:10 am |
-| BREAK | 10 mins | 11:10–11:20 am |
-| Navigating files and dirs | 40 mins | 11:20–12:00 |
-| Working with files and dirs | 55 mins | 12:00–12:20 |
-| LUNCH | 50 mins | 12:20–1:10 pm |
-| Working with files and dirs | ... | 1:10–1:45 pm |
-| Redirection | 50 mins | 1:45–2:20 pm |
-| BREAK | 10 mins | 2:20–2:30 pm |
-| Redirection | ... | 2:30–2:45 pm |
-| Writing with scripts and working with data | 45 mins | 2:45–3:30 pm |
-| Project organisation | ~5 mins | 3:30–3:35 pm |
-
-### Two day (9:30am–12:30pm)
-
-**Day 1**
-
-| Episode | Duration | Approx time |
-|---|---|---|
-| Welcome and opening | 25 mins | 09:30–09:55 |
-| Environment log in | 10 mins | 09:55–10:05 |
-| Overview | 5 mins | 10:05–10:10 |
-| First steps - say goodbye to mouse | 30 mins | 10:10–10:40 |
-| BREAK | 10 mins | 10:40–10:50 |
-| Navigating files and dirs | 40 mins | 10:50–11:30 |
-| BREAK | 10 mins | 11:30–11:40 |
-| Working with files and dirs | 50 mins | 11:40–12:30 |
-
-**Day 2**
-
-| Episode | Duration | Approx time |
-|---|---|---|
-| Working with files and dirs | 10 mins | 09:30–09:40 |
-| Redirection | 50 mins | 09:40–10:30 |
-| BREAK | 10 mins | 10:30–10:40 |
-| Writing with scripts and working with data | 45 mins | 10:40–11:25 |
-| Project organisation | 10 mins | 11:25–11:35 |
+| Code in qmd files | 50 mins | 10:35–11:25 am |
+| BREAK | 10 mins | 11:25–11:35 am |
+| Projects: books and websites | 40 mins | 11:35–12:15 pm |
+| LUNCH | 50 mins | 12:15–1:05 pm |
+| Building our own research portfolio | 55 mins | 1:05–2:00 pm |
+| Buffer time | 30 mins | 2:00–2:30 pm |
 
 :::
 
 ## Introduction to Bash Scripting and HPC Scheduler
 
-Single-day workshop only, 10am–4pm.
+::: {.panel-tabset}
+
+### One day (10am–4pm) 
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -265,9 +285,14 @@ Single-day workshop only, 10am–4pm.
 | Working with job scheduler | 1 hour | 14:30–15:30 |
 | Buffer time | 30 mins | 15:30 - 16:00 |
 
+:::
+
 ## Intermediate R
 
-Two-day workshop, 9 am - 1 pm 
+
+::: {.panel-tabset}
+
+### Two-day workshop (9 am - 1 pm) 
 
 **Day 1**
 
@@ -289,17 +314,20 @@ Two-day workshop, 9 am - 1 pm
 | Episode | Duration | Approx time |
 |---|---|---|
 | Functions and conditional statements part3 improve function design | 30 mins | 9–9:30 |
-| Iterations part1 for loops | | 50 mins | 9:30–10:40 |
+| Iterations part1 for loops | 50 mins | 9:30–10:40 |
 | BREAK | 15 mins | 10:40–10:55 |
-| Iterations part2 Pairwise correlation | | 40 mins | 10:55–11:35 |
-| Iterations part3 rules to iterate by | | 20 mins | 11:35–11:55 |
+| Iterations part2 Pairwise correlation |  40 mins | 10:55–11:35 |
+| Iterations part3 rules to iterate by | 20 mins | 11:35–11:55 |
 | BREAK |  15 mins | 11:55–12:10 |
-| Data structures | | 40 mins | 12:10–12:50 |
+| Data structures |  40 mins | 12:10–12:50 |
+
+:::
 
 ## Intermediate Shell
 
+::: {.panel-tabset}
 
-Single-day workshop, 10 am - 4 pm
+###  One day workshop (10 am - 4 pm)  
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -315,10 +343,13 @@ Single-day workshop, 10 am - 4 pm
 | 4. Inspecting + manipulating part3 | 45 mins | 14:30–15:15 |
 | Puzzles | 45 mins | 15:15–16:00 |
 
+:::
 
 ## Constructing Pangenome Graphs
 
-One day workshop, 09:30 - 14:30
+::: {.panel-tabset}
+
+### One day (09:30 - 14:30)  
 
 | Episode | Duration | Approx time |
 |---|---|---|
@@ -337,3 +368,5 @@ One day workshop, 09:30 - 14:30
 | Buffer time | 20 mins | 14:10–14:30 |
 
 > Note: Last step in 'Running PGGB' takes 15 mins to run. Go to break once run starts.  
+
+:::

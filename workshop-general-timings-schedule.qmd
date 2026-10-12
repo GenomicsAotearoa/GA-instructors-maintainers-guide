@@ -66,17 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
 |---|---|---|
 | Welcome and opening | 25 mins | 10–10:25 |
 | Environment log in | 10 mins | 10:25–10:35 |
-| Intro to R/Rstudio | 40 mins | 10:35–11:15 |
-| BREAK | 10 mins | 11:15–11:25 |
-| R basics (objects) | 30 mins | 11:25–11:55 |
-| R basics (vectors) | 50 mins | 11:55–12:15 |
+| Intro to R/Rstudio | 35 mins | 10:35–11:10 |
+| BREAK | 10 mins | 11:10–11:20 |
+| R basics (objects) | 30 mins | 11:20–11:50 |
+| R basics (vectors) | 45 mins | 11:50–12:15 |
 | LUNCH | 45 mins | 12:15–1:00 |
-| R basics (vectors) cont'd | ...| 1:00–1:30 |
-| Intro to dataset | 5 mins | 1:30–1:35 |
-| R basics contd - df and manipulation| 1 hour | 1:35–2:35 |
-| BREAK | 10 mins | 2:35–2:45 |
-| Data viz w ggplot2 | 40 mins | 2:45–3:25 |
-| Getting help with R | 20 mins | 3:25–END |
+| R basics (vectors) cont'd | ...| 1:00–1:20 |
+| Intro to dataset | 5 mins | 1:20–1:25 |
+| R basics contd - df and manipulation| 1 hour | 1:25–2:25 |
+| BREAK | 10 mins | 2:25–2:35 |
+| Data viz w ggplot2 | 50 mins | 2:35–3:25 |
+| Getting help with R | 20 mins | 3:25–3:45 |
+| Buffer time | 15 mins | 3:45 - 4:00  |
+
 
 ### Two day (9:30am–12:30pm)
 

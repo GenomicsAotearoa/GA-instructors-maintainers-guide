@@ -184,9 +184,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 :::
 
-## RNA-seq
+## RNA-seq Data Analysis
 
 ::: {.panel-tabset}
+
+
+### One-day workshop (9 am - 4 pm)
+
+| Episode | Duration | Approx time |
+|---|---|---|
+| Welcome and opening | 25 mins | 9:00–9:25 |
+| Environment log in | 10 mins | 9:25–9:35 |
+| Background | 10 mins | 9:35–9:45 |
+| Sequence quality and trimming | 1 hour | 9:45–10:45 |
+| BREAK | 10 mins | 10:45–10:55 |
+| Quantifying gene expression | 1 hour | 10:55–11:55 |
+| Exploratory analysis | 50 mins | 11:55–12:30 |
+| LUNCH | 50 mins | 12:30–1:20 |
+| Exploratory analysis cont'd | ... | 1:20–1:35 |
+| Identify DE genes | 1 hour 10 mins | 1:35–2:45 |
+| BREAK | 10 mins | 2:45 - 2:55 |
+| Functional analysis | 1 hour | 2:55–3:55 |
+| Buffer time | 5 mins | 3:55-4:00 |
+
 
 ### Two-day workshop (9am - 1 pm)
 
@@ -199,27 +219,27 @@ document.addEventListener("DOMContentLoaded", function () {
 | Background | 10 mins | 9:35–9:45 |
 | Sequence quality | 55 mins | 9:45–10:10 |
 | BREAK | 10 mins | 10–10:10 |
-| Sequence quality | | 10:10–10:40 |
+| Sequence quality | ... | 10:10–10:40 |
 | Quantifying gene expn | 1 hour | 10:40–11:10 |
 | BREAK | 10 mins | 11:10–11:20 |
-| Quantifying gene expn | | 11:20–11:50 |
+| Quantifying gene expn | ... | 11:20–11:50 |
 | Exploratory analysis | 1 hour | 11:50–12:20 |
 | BREAK | 10 mins | 12:20–12:30 |
-| Exploratory analysis | | 12:30–END |
+| Exploratory analysis | ... | 12:30–END |
 
 **Day 2**
 
 | Episode | Duration | Approx time |
 |---|---|---|
-| Identify DE genes | | |
+| Identify DE genes |... |... |
 | t-tests and Pvalues | 25 mins | 9–9:25 |
 | Identify DE w limma | 50 mins | 9:25–10:00 |
 | BREAK | 10 mins | 10–10:10 |
-| Identify DE w limma | | 10:10–10:25 |
+| Identify DE w limma | ... | 10:10–10:25 |
 | Identify DE w DEseq2 | 30 mins | 10:25–10:55 |
 | BREAK | 15 mins | 10:55–11:10 |
 | Functional analysis | 50 mins | 11:10–12:00 |
-| OPTIONAL BREAK | 5–10 mins | |
+| OPTIONAL BREAK | 5–10 mins |... |
 | General discussion | ~30 mins | 12:00–END |
 
 :::
